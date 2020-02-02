@@ -65,6 +65,24 @@ Resources:
             Path: /
             ManagedPolicyArns:
               - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+            Policies:
+              - PolicyName: AutoCapacityReservationPermissions
+                PolicyDocument:
+                    Version: '2012-10-17'
+                    Statement:
+                      - Effect: Allow
+                        Action:
+                          - ec2:DescribeInstances
+                          - ec2:DescribeCapacityReservations
+                          - ec2:CreateCapacityReservation
+                        Resource: '*'
+                      - Effect: Allow
+                        Action:
+                          - ec2:CreateTags
+                          - ec2:DeleteTags
+                          - ec2:ModifyCapacityReservation
+                          - ec2:CancelCapacityReservation
+                        Resource: !Sub arn:${AWS::Partition}:ec2:${AWS::Region}:${AWS::AccountId}:capacity-reservation/*
 
     LambdaFunction:
         Type: AWS::Lambda::Function
