@@ -1,6 +1,6 @@
 # Automatic Capacity Reservations
 
-When deployed, instances will automatically be assigned to a capacity reservation which will be maintained at the number of running instances that are matched.
+When deployed, EC2 instances will automatically be assigned to a [capacity reservation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) which will be maintained at the number of running instances that are matched.
 
 The solution uses EventBridge Rules that react to EC2 instance state changes by invoking a Lambda that creates/increments/decrements or cancels capacity reservations based on the number of instances that match. Instances will be tagged with a `AutoCapacityReservationId` tag which indicates the assigned capacity reservation.
 
