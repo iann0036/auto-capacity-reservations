@@ -8,7 +8,7 @@ The solution is intended to provide guaranteed capacity for instances that are i
 
 ## Installation
 
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=buildkite&templateURL=https://s3.amazonaws.com/ianmckay-ap-southeast-2/auto-capacity-reservations/template.yml)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=auto-capacity-reservations&templateURL=https://s3.amazonaws.com/ianmckay-us-east-1/auto-capacity-reservations/template.yml)
 
 Click the above link to deploy the stack to your environment. The capacity reservation provider will be effective for all instances launched within the region after the stack is created.
 
