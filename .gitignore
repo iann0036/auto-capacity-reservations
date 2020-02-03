@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 
 # Custom
+notes.txt
 lambda/__pycache__
 lambda/bin
 lambda/boto3
