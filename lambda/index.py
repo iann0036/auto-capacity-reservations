@@ -12,15 +12,15 @@ def handler(event, context):
         InstanceIds=[instanceid]
     )['Reservations'][0]['Instances'][0]
 
+    image = client.describe_images(
+        ImageIds=[instance['ImageId']]
+    )['Images'][0]
+
+    platform = image['PlatformDetails']
     instance_capacity_reservation_id = None
-    platform = "Linux/UNIX"
-    if "Platform" in instance and instance['Platform'].lower() == "windows":
-        platform = "Windows"
     
     if 'Tags' in instance:
         for tag in instance['Tags']:
-            if tag['Key'] == "AutoCapacityReservationPlatform":
-                platform = tag['Value']
             if tag['Key'] == "AutoCapacityReservationId":
                 instance_capacity_reservation_id = tag['Value']
 

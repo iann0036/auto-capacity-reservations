@@ -73,6 +73,7 @@ Resources:
                       - Effect: Allow
                         Action:
                           - ec2:DescribeInstances
+                          - ec2:DescribeImages
                           - ec2:DescribeCapacityReservations
                           - ec2:CreateCapacityReservation
                         Resource: '*'

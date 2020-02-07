@@ -16,14 +16,12 @@ If you prefer, you can also manually upsert the [template.yml](https://github.co
 
 ## Instance Platform Support
 
-Because the EC2 API contains **no support for retrieving an instance/image platform**, there are some issues with the platform support that will be automatically assigned for a capacity reservation.
+With the [recent introduction](https://aws.amazon.com/about-aws/whats-new/2020/02/amazon-ec2-adds-ability-to-easily-query-billing-information-of-amazon-machine-images/) of full platform information in the DescribeImages API method, capacity reservations can now support all platform types out of the box, which are:
 
-If you are using an image based on either the `Linux/UNIX` or `Windows` platform, the platform will automatically assign the correct capacity reservation attributes to these instances. If not, you must attach a tag with the `AutoCapacityReservationPlatform` key and the value being the platform, which should be one of the following:
-
-* Linux/UNIX _(automatically assigned)_
+* Linux/UNIX
 * Red Hat Enterprise Linux
 * SUSE Linux
-* Windows _(automatically assigned)_
+* Windows
 * Windows with SQL Server
 * Windows with SQL Server Enterprise
 * Windows with SQL Server Standard
@@ -31,8 +29,6 @@ If you are using an image based on either the `Linux/UNIX` or `Windows` platform
 * Linux with SQL Server Standard
 * Linux with SQL Server Web
 * Linux with SQL Server Enterprise
-
-If you do not assign the correct platform type in the tag, the wrong Capacity Reservation may be incremented in total capacity.
 
 ## Feedback
 

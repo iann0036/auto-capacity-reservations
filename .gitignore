@@ -133,9 +133,9 @@ notes.txt
 lambda/__pycache__
 lambda/bin
 lambda/boto3
-lambda/boto3-1.11.9.dist-info
+lambda/boto3-1.11.12.dist-info
 lambda/botocore
-lambda/botocore-1.14.9.dist-info
+lambda/botocore-1.14.12.dist-info
 lambda/dateutil
 lambda/docutils
 lambda/docutils-0.15.2.dist-info
@@ -143,7 +143,7 @@ lambda/jmespath
 lambda/jmespath-0.9.4.dist-info
 lambda/python_dateutil-2.8.1.dist-info
 lambda/s3transfer
-lambda/s3transfer-0.3.2.dist-info
+lambda/s3transfer-0.3.3.dist-info
 lambda/six-1.14.0.dist-info
 lambda/six.py
 lambda/urllib3
